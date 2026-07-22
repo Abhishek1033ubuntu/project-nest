@@ -2,7 +2,7 @@
 
 Project N.E.S.T. is a decentralized, hardware-accelerated edge computing platform designed to optimize complex feedback loops and predict system failures before they occur. By deploying dedicated Neural Processing Units (NPUs) at the asset level, N.E.S.T. provides real-time, low-latency intelligence entirely on-premises—ensuring 100% data privacy and zero cloud dependency.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.Abhishek1033ubuntu.svg)](https://doi.org/10.5281/zenodo.Abhishek1033ubuntu)
 
 ## 🚀 Dual-Core Architecture
 
