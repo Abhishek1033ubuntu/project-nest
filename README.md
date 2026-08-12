@@ -36,3 +36,5 @@ python src/master_ecosystem.py
 
 Commercial & Financial Impact
 For industrial deployments, N.E.S.T. operates on a minimalist hardware footprint (~$5,350 capital expenditure for a 10-machine layout) with zero recurring software licensing fees. Mitigating a single hour of unplanned factory downtime yields an immediate break-even return on investment (ROI) of over 370%.
+
+Note on References & IP: Detailed citations and literature references are restricted to protect Intellectual Property. See References.md for details or to request access.
