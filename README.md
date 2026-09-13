@@ -23,10 +23,10 @@ The ecosystem features a highly versatile mathematical core split into two disti
 
 To run the complete, integrated dual-core simulation pipeline on your local machine:
 
-1. Clone this repository:
-```bash
-   git clone [https://github.com/Abhishek1033ubuntu/project-nest.git](https://github.com/Abhishek1033ubuntu/project-nest.git)
-   cd project-nest
+Clone this repository:
+```
+git clone [https://github.com/Abhishek1033ubuntu/project-nest.git](https://github.com/Abhishek1033ubuntu/project-nest.git)
+cd project-nest
 ```
 Install dependencies:
 ```
