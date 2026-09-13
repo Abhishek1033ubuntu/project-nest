@@ -1,7 +1,6 @@
 # Project N.E.S.T. (Neural Edge Support Toolkit)
 
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21498497.svg)](https://doi.org/10.5281/zenodo.21498497) 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21498497-blue?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.21498497)
 ![Status](https://img.shields.io/badge/Status-Research_POC-orange) ![Type](https://img.shields.io/badge/Type-Simulation_Model-blue)
 
 ---
@@ -30,10 +29,11 @@ To run the complete, integrated dual-core simulation pipeline on your local mach
    cd project-nest
 Install dependencies:
 pip install paho-mqtt
-
+```
 Run the master simulation framework:
+```
 python src/master_ecosystem.py
-
+```
 Commercial & Financial Impact
 For industrial deployments, N.E.S.T. operates on a minimalist hardware footprint (~$5,350 capital expenditure for a 10-machine layout) with zero recurring software licensing fees. Mitigating a single hour of unplanned factory downtime yields an immediate break-even return on investment (ROI) of over 370%.
 
