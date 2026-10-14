@@ -1,42 +1,38 @@
-# Project N.E.S.T. (Neural Edge Support Toolkit)
+# project-nest
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21498497-blue?style=for-the-badge&logo=zenodo&logoColor=white)](https://doi.org/10.5281/zenodo.21498497)
-![Status](https://img.shields.io/badge/Status-Research_POC-orange) ![Type](https://img.shields.io/badge/Type-Simulation_Model-blue)
+[![Co-Developed with-Google Gemini-4285F4?style=for-the-badge&logo=google-gemini&logoColor=white](https://img.shields.io/badge/Co--Developed%20with-Google%20Gemini-4285F4?style=for-the-badge&logo=google-gemini&logoColor=white)](https://gemini.google.com)
+[![Architecture-Causal%20Edge%20AI-00599C?style=for-the-badge&logo=rust&logoColor=white](https://img.shields.io/badge/Architecture-Causal%20Edge%20AI-00599C?style=for-the-badge&logo=rust&logoColor=white)](#)
+[![License-Apache%202.0-blue.svg?style=for-the-badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
+[![Sponsor-GitHub%20Sponsors-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/Abhishek1033ubuntu)
+[![Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white](https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/abhishek1033)
+
+> Edge-native deterministic industrial automation platform featuring Causal SCM fault diagnosis, lock-free Rust concurrency, zero-downtime ONNX neural model hot-reloading, and sub-millisecond edge telemetry processing.
 
 ---
-Project N.E.S.T. is a decentralized, hardware-accelerated edge computing platform designed to optimize complex feedback loops and predict system failures before they occur. By deploying dedicated Neural Processing Units (NPUs) at the asset level, N.E.S.T. provides real-time, low-latency intelligence entirely on-premises—ensuring 100% data privacy and zero cloud dependency.
 
-## 🚀 Dual-Core Architecture
+## Author Credentials & AI Collaboration Notice
 
-The ecosystem features a highly versatile mathematical core split into two distinct operational paradigms:
+* **Lead Author & Principal Developer:** Abhishek Singh
+* **GitHub Profile:** [Abhishek1033ubuntu](https://github.com/Abhishek1033ubuntu)
+* **ORCID Identifier:** [0009-0004-6913-096X](https://orcid.org/0009-0004-6913-096X)
+* **Primary Contact:** abhishek1033@gmail.com | abhishek.singh.941491229013@proton.me | abhishek80@outlook.com
+* **AI Architecture Collaboration:** Co-designed and engineered in collaboration with **Google Gemini**.
 
-1. **N.E.S.T. Industrial (Predictive Maintenance):** Monitors high-speed closed-loop motor telemetry (RPM drift vs. current draw) inside electrical cabinets to flag mechanical misalignments and bearing wear 36 to 48 hours before an unplanned line stoppage.
-2. **N.E.S.T. Quantum (Superradiant Laser Optimization):** Operates at the frontier of quantum metrology, processing active optical clock parameters (collective atomic spin vectors) on millisecond timescales to dynamically counteract cavity pulling and quantum decoherence.
+---
 
-## 🛠️ Key Features
+## Support & Sponsorship
 
-- **NPU-Accelerated Edge Logic:** Purpose-built to process parallel vector mathematics natively on low-power devices (e.g., NVIDIA Jetson, Google Coral).
-- **True Network Isolation:** Runs entirely within a secure local plant intranet via lightweight MQTT protocols—ideal for air-gapped manufacturing or confidential research labs.
-- **Closed-Loop Human-in-the-Loop Training:** Captures technician resolutions and post-repair metrics to build an organic, self-improving localized machine learning ledger.
+If `project-nest` accelerates your industrial automation workflows, research, or enterprise deployment, consider supporting ongoing independent development:
 
-## 📦 Quick Start Simulation
+* **GitHub Sponsors:** [Sponsor @Abhishek1033ubuntu](https://github.com/sponsors/Abhishek1033ubuntu)
+* **Direct PayPal Contribution:** [paypal.me/abhishek1033](https://www.paypal.me/Abhishek1033ubuntu)
 
-To run the complete, integrated dual-core simulation pipeline on your local machine:
+---
 
-Clone this repository:
-```
-git clone [https://github.com/Abhishek1033ubuntu/project-nest.git](https://github.com/Abhishek1033ubuntu/project-nest.git)
-cd project-nest
-```
-Install dependencies:
-```
-pip install paho-mqtt
-```
-Run the master simulation framework:
-```
-python src/master_ecosystem.py
-```
-Commercial & Financial Impact
-For industrial deployments, N.E.S.T. operates on a minimalist hardware footprint (~$5,350 capital expenditure for a 10-machine layout) with zero recurring software licensing fees. Mitigating a single hour of unplanned factory downtime yields an immediate break-even return on investment (ROI) of over 370%.
+## Intellectual Property & License Notice
 
-Note on References & IP: Detailed citations and literature references are restricted to protect Intellectual Property. See References.md for details or to request access.
+Copyright (c) 2026 **Abhishek Singh**.
+
+This software repository is published under the **Apache License 2.0**. Full legal text is available in the [LICENSE](LICENSE) file. 
+
+*Note: Technical patent documentation, underlying mathematical claim disclosures, and hardware integration blueprints are preserved locally under private author ownership.*
