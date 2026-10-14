@@ -54,7 +54,9 @@ project-nest/
 ├── deploy_edge.sh                   # Air-gapped deployment script
 ├── docker-compose.edge.yml          # Local edge appliance container stack
 ├── LICENSE                          # Apache License 2.0
+├── HOWTOUSE.md                      #How to use the repository
 └── README.md                        # Primary documentation with author metadata & badges
+
 ```
 
 > [How to use the repository](Docs/HOWTOUSE.md)
