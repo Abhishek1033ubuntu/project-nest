@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: project-nest Maintenance Management REST API
+  version: 1.0.0
+  description: Edge REST endpoints for technician GUI interaction, LOTO verification, and work-order state updates.
+
+paths:
+  /api/v1/work-orders/{event_id}/status:
+    patch:
+      summary: Update maintenance work-order lifecycle status
+      parameters:
+        - name: event_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - technician_id
+                - status
+              properties:
+                technician_id:
+                  type: string
+                status:
+                  type: string
+                  enum: [ACKNOWLEDGED, IN_PROGRESS, LOTO_VERIFIED, COMPLETED, ESCALATED]
+                notes:
+                  type: string
+      responses:
+        '200':
+          description: Work order status updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  updated_at:
+                    type: string
+                    format: date-time
+                  event_id:
+                    type: string
+                  current_status:
+                    type: string
