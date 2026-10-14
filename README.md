@@ -57,7 +57,7 @@ project-nest/
 └── README.md                        # Primary documentation with author metadata & badges
 ```
 
-## [How to use the repository](docs/HOWTOUSE.md)
+> [How to use the repository](Docs/HOWTOUSE.md)
 
 ---
 ## Support & Sponsorship
