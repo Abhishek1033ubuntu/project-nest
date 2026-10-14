@@ -1,16 +1,17 @@
-"""
-project-nest Causal Automation Engine Package
-"""
-from .engine import CausalDiagnosisPipeline, FaultReport
-from .cmms_bridge import CMMSIntegrationBridge, CausalFaultEvent, RequisitionOrder
-from .discovery import NOTEARSCausalDiscovery
+[package]
+name = "scm_core"
+version = "2.0.0"
+edition = "2021"
 
-__version__ = "0.5.0"
-__all__ = [
-    "CausalDiagnosisPipeline",
-    "FaultReport",
-    "CMMSIntegrationBridge",
-    "CausalFaultEvent",
-    "RequisitionOrder",
-    "NOTEARSCausalDiscovery",
-]
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+arc-swap = "1.7"
+ed25519-dalek = "2.1"
+hex = "0.4"
+ndarray = "0.15"
+notify = "6.1"
+ort = { version = "2.0.0-rc.2" }
+pyo3 = { version = "0.20", features = ["extension-module"] }
+sha2 = "0.10"
