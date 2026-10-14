@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  nats-broker:
+    image: nats:2.10-alpine
+    container_name: nest-nats-broker
+    restart: always
+    network_mode: host
+    command: ["-m", "8222", "-js"]
+    healthcheck:
+      test: ["CMD", "nats-server", "-v"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-buffer:
+    image: redis:7.2-alpine
+    container_name: nest-redis-buffer
+    restart: always
+    network_mode: host
+    command: redis-server --save "" --appendonly no --maxmemory 2gb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  scm-core-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile.scm_engine
+    container_name: nest-scm-core
+    restart: always
+    network_mode: host
+    environment:
+      - NATS_URL=nats://127.0.0.1:4222
+      - REDIS_URL=redis://127.0.0.1:6379
+      - MODEL_DIR=/opt/project_nest/models
+    volumes:
+      - /opt/project_nest/models:/opt/project_nest/models:rw
+      - /opt/project_nest/config:/opt/project_nest/config:ro
+    depends_on:
+      nats-broker:
+        condition: service_healthy
+      redis-buffer:
+        condition: service_healthy
+
+  web-gui-server:
+    image: nginx:1.25-alpine
+    container_name: nest-web-gui
+    restart: always
+    network_mode: host
+    volumes:
+      - ./gui/build:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - scm-core-engine
