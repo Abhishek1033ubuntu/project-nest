@@ -1,0 +1,106 @@
+asyncapi: '2.6.0'
+info:
+  title: project-nest Technician GUI Real-Time Diagnostic Stream
+  version: '1.0.0'
+  description: Low-latency WebSocket stream emitting causal fault isolations, 3D CAD spatial telemetry, and spare-part reservations.
+
+servers:
+  edge_local:
+    url: ws://edge-server.local:8080/ws/v1/diagnostics/live
+    protocol: ws
+    description: On-premise air-gapped factory edge WebSocket server.
+
+channels:
+  /ws/v1/diagnostics/live:
+    subscribe:
+      summary: Stream real-time causal fault alerts and spatial coordinate payloads to GUI clients.
+      message:
+        $ref: '#/components/messages/CausalFaultAlert'
+
+components:
+  messages:
+    CausalFaultAlert:
+      name: CausalFaultAlert
+      title: Causal Fault Alert Event
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/CausalFaultPayload'
+
+  schemas:
+    CausalFaultPayload:
+      type: object
+      required:
+        - event_id
+        - timestamp_utc
+        - diagnosis
+        - spatial_telemetry
+        - part_reservation
+      properties:
+        event_id:
+          type: string
+          format: uuid
+        timestamp_utc:
+          type: string
+          format: date-time
+        diagnosis:
+          type: object
+          required:
+            - root_cause_node
+            - confidence_score
+            - structural_residual_shift
+            - severity
+          properties:
+            root_cause_node:
+              type: string
+            confidence_score:
+              type: number
+              format: float
+            structural_residual_shift:
+              type: number
+              format: float
+            severity:
+              type: string
+              enum: [INFO, WARNING, CRITICAL, EMERGENCY]
+            estimated_time_to_failure_hours:
+              type: number
+              format: float
+        spatial_telemetry:
+          type: object
+          required:
+            - facility_zone
+            - asset_tag
+            - coordinates_xyz
+            - pid_drawing_id
+          properties:
+            facility_zone:
+              type: string
+            asset_tag:
+              type: string
+            pid_drawing_id:
+              type: string
+            coordinates_xyz:
+              type: array
+              items:
+                type: number
+                format: float
+              minItems: 3
+              maxItems: 3
+        part_reservation:
+          type: object
+          required:
+            - requisition_id
+            - part_sku
+            - part_description
+            - warehouse_bin
+            - quantity
+          properties:
+            requisition_id:
+              type: string
+            part_sku:
+              type: string
+            part_description:
+              type: string
+            warehouse_bin:
+              type: string
+            quantity:
+              type: integer
