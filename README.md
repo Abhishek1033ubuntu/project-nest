@@ -4,7 +4,7 @@
 [![Architecture-Causal%20Edge%20AI-00599C?style=for-the-badge&logo=rust&logoColor=white](https://img.shields.io/badge/Architecture-Causal%20Edge%20AI-00599C?style=for-the-badge&logo=rust&logoColor=white)](#)
 [![License-Apache%202.0-blue.svg?style=for-the-badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
 [![Sponsor-GitHub%20Sponsors-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/Abhishek1033ubuntu)
-[![Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white](https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/abhishek1033)
+[![Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white](https://img.shields.io/badge/Donate-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/Abhishek1033ubuntu)
 
 > Edge-native deterministic industrial automation platform featuring Causal SCM fault diagnosis, lock-free Rust concurrency, zero-downtime ONNX neural model hot-reloading, and sub-millisecond edge telemetry processing.
 
