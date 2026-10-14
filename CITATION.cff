@@ -1,9 +1,24 @@
+# CITATION.cff
 cff-version: 1.2.0
-title: "project-nest"
-message: "If you use this software, please cite it as below."
+title: project-nest
+message: "If you use this software in your research or industrial operations, please cite it as below."
+type: software
 authors:
-  - family-names: "Singh"
-    given-names: "Abhishek"
+  - family-names: Singh
+    given-names: Abhishek
     orcid: "https://orcid.org/0009-0004-6913-096X"
-version: 1.0.0
-date-released: 2026-06-26
+    email: abhishek1033@gmail.com
+repository-code: "https://github.com/Abhishek1033ubuntu/project-nest"
+url: "https://github.com/Abhishek1033ubuntu/project-nest"
+abstract: "Edge-native deterministic industrial automation platform featuring Structural Causal Model (SCM) fault diagnosis, lock-free Rust concurrency, zero-downtime ONNX neural model hot-reloading, cryptographic Ed25519 signature verification, and sub-millisecond telemetry processing."
+keywords:
+  - industrial-automation
+  - causal-ai
+  - structural-causal-models
+  - rust
+  - edge-computing
+  - opc-ua
+  - onnx-runtime
+license: Apache-2.0
+version: 2.0.0
+date-released: "2026-10-14"
