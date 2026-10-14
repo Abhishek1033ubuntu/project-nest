@@ -1,11 +1,11 @@
 from dataclasses import dataclass
-from typing import Dict, Tuple
+from typing import Dict
 import scm_core
 
 @dataclass
 class FaultReport:
     root_cause_node: str
-    anomaly_magnitude: f64
+    anomaly_magnitude: float
     structural_residuals: Dict[str, float]
     recommended_action: str
 
@@ -20,17 +20,12 @@ class CausalDiagnosisPipeline:
             "Pipe_Vibration": "Inspect mounting bolts and check for mechanical cavitating flow."
         }
 
-    fn_configure_pump_station = None
-
     def setup_pump_station_topology(self):
-        """Constructs the SCM graph for a industrial pump station."""
-        # Edges: VFD -> RPM -> Discharge_Pressure -> Vibration
         self.engine.add_edge("VFD_Frequency", "Motor_Current")
         self.engine.add_edge("VFD_Frequency", "Pump_RPM")
         self.engine.add_edge("Pump_RPM", "Discharge_Pressure")
         self.engine.add_edge("Discharge_Pressure", "Pipe_Vibration")
 
-        # Structural Equations: X_i = sum(w * PA) + bias
         self.engine.register_linear_equation("Motor_Current", ["VFD_Frequency"], [1.45], 2.0)
         self.engine.register_linear_equation("Pump_RPM", ["VFD_Frequency"], [29.8], 10.0)
         self.engine.register_linear_equation("Discharge_Pressure", ["Pump_RPM"], [0.045], 0.5)
@@ -38,12 +33,7 @@ class CausalDiagnosisPipeline:
 
     def process_telemetry_event(self, telemetry: Dict[str, float]) -> FaultReport:
         root_cause, residual, residuals_map = self.engine.diagnose(telemetry)
-        
-        action = self._action_rules.get(
-            root_cause, 
-            "Trigger manual technician review on identified subsystem."
-        )
-
+        action = self._action_rules.get(root_cause, "Trigger manual technician review on identified subsystem.")
         return FaultReport(
             root_cause_node=root_cause,
             anomaly_magnitude=residual,
