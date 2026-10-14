@@ -1,12 +1,17 @@
 [package]
 name = "scm_core"
-version = "0.2.0"
+version = "0.5.0"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-pyo3 = { version = "0.20", features = ["extension-module"] }
-ort = { version = "2.0.0-rc.2" }
+arc-swap = "1.7"
+ed25519-dalek = "2.1"
+hex = "0.4"
 ndarray = "0.15"
+notify = "6.1"
+ort = { version = "2.0.0-rc.2" }
+pyo3 = { version = "0.20", features = ["extension-module"] }
+sha2 = "0.10"
