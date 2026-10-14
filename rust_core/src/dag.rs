@@ -31,7 +31,6 @@ impl DAG {
         *self.in_degree.get_mut(to).unwrap() += 1;
 
         if !self.is_acyclic() {
-            // Roll back edge if cycle detected
             self.adjacency.get_mut(from).unwrap().pop();
             *self.in_degree.get_mut(to).unwrap() -= 1;
             return Err(format!("Cycle detected when adding edge {} -> {}", from, to));
