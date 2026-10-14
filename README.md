@@ -19,7 +19,43 @@
 * **AI Architecture Collaboration:** Co-designed and engineered in collaboration with **Google Gemini**.
 
 ---
+## Repository Structure
 
+```
+project-nest/
+├── .github/
+│   └── FUNDING.yml                  # GitHub Sponsors & PayPal funding config
+├── api/
+│   ├── asyncapi.yaml                # Real-time WebSocket diagnostic & 3D spatial schema
+│   └── openapi.yaml                 # REST API schema for work-order status lifecycle
+├── gui/
+│   └── src/
+│       └── PlantCadViewer.jsx       # React + Three.js 3D CAD plant fault viewer
+├── rust_core/ (scm_core)
+│   ├── Cargo.toml                   # Rust crate dependencies (PyO3, ort, arc-swap, sha2, ed25519-dalek, notify)
+│   └── src/
+│       ├── lib.rs                   # PyO3 binding module
+│       ├── dag.rs                   # Directed Acyclic Graph & topological sorting engine
+│       ├── scm.rs                   # Structural Causal Model & atomic lock-free hot-reloading
+│       ├── security.rs              # SHA-256 & Ed25519 signature verifier
+│       └── watcher.rs               # Notify file-system watcher for automatic ONNX updates
+├── python/
+│   ├── project_nest_causal/
+│   │   ├── __init__.py
+│   │   ├── engine.py                # High-level pipeline controller
+│   │   ├── cmms_bridge.py           # SAP S/4HANA & IBM Maximo automated requisition driver
+│   │   └── discovery.py             # NOTEARS data-driven causal graph learning
+├── simulation/
+│   └── opc_ua_hil_simulator.py      # OPC-UA hardware-in-the-loop server with fault injection
+├── tests/
+│   └── test_integration.py          # PyTest end-to-end integration suite
+├── deploy_edge.sh                   # Air-gapped deployment script
+├── docker-compose.edge.yml          # Local edge appliance container stack
+├── LICENSE                          # Apache License 2.0
+└── README.md                        # Primary documentation with author metadata & badges
+```
+
+---
 ## Support & Sponsorship
 
 If `project-nest` accelerates your industrial automation workflows, research, or enterprise deployment, consider supporting ongoing independent development:
