@@ -67,7 +67,7 @@ project-nest/
 If `project-nest` accelerates your industrial automation workflows, research, or enterprise deployment, consider supporting ongoing independent development:
 
 * **GitHub Sponsors:** [Sponsor @Abhishek1033ubuntu](https://github.com/sponsors/Abhishek1033ubuntu)
-* **Direct PayPal Contribution:** [paypal.me/abhishek1033](https://www.paypal.me/Abhishek1033ubuntu)
+* **Direct PayPal Contribution:** [paypal.me/abhishek1033ubuntu](https://www.paypal.me/Abhishek1033ubuntu)
 
 ---
 
